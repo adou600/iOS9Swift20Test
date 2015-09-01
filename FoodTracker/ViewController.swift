@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
     
     // MARK: UITextFieldDelegate
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -38,11 +39,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         photoImageView.image = selectedImage
         dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    //MARK: Actions
-    @IBAction func setDefaultLabelText(sender: UIButton) {
-        mealNameLabel.text = "Default text"
     }
     
     @IBAction func selectImageFromPhotoLibrary(sender: UITapGestureRecognizer) {
