@@ -18,6 +18,8 @@
 		A55B9B481B96CD690072069B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B9B471B96CD690072069B /* Meal.swift */; settings = {ASSET_TAGS = (); }; };
 		A55B9B4A1B96DA240072069B /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B9B491B96DA240072069B /* MealTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 		A55B9B4C1B96E6D70072069B /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B9B4B1B96E6D70072069B /* MealTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		A55B9B4E1B973F790072069B /* MealPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B9B4D1B973F790072069B /* MealPage.swift */; settings = {ASSET_TAGS = (); }; };
+		A55B9B501B973FD40072069B /* MealTablePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55B9B4F1B973FD40072069B /* MealTablePage.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		A55B9B471B96CD690072069B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		A55B9B491B96DA240072069B /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
 		A55B9B4B1B96E6D70072069B /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
+		A55B9B4D1B973F790072069B /* MealPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPage.swift; sourceTree = "<group>"; };
+		A55B9B4F1B973FD40072069B /* MealTablePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTablePage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 			children = (
 				A50927121B959B9300647116 /* FoodTrackerUITests.swift */,
 				A50927141B959B9300647116 /* Info.plist */,
+				A55B9B4D1B973F790072069B /* MealPage.swift */,
+				A55B9B4F1B973FD40072069B /* MealTablePage.swift */,
 			);
 			path = FoodTrackerUITests;
 			sourceTree = "<group>";
@@ -292,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A50927131B959B9300647116 /* FoodTrackerUITests.swift in Sources */,
+				A55B9B501B973FD40072069B /* MealTablePage.swift in Sources */,
+				A55B9B4E1B973F790072069B /* MealPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

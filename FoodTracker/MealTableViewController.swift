@@ -22,12 +22,17 @@ class MealTableViewController: UITableViewController {
         
         if let savedMeals = loadMeals() {
             meals += savedMeals
-        } else {
-            loadSampleMeals()
         }
         
+        if meals.count == 0 {
+            loadSampleMeals()
+        }
+
     }
     
+    func loadMeals() -> [Meal]? {
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL!.path!) as? [Meal]
+    }
     
     func loadSampleMeals(){
         let burgerPhoto = UIImage(named: "burger")!
@@ -148,10 +153,6 @@ class MealTableViewController: UITableViewController {
         if !isSuccessfulSave {
             print("Failed to save meals...")
         }
-    }
-    
-    func loadMeals() -> [Meal]? {
-        return NSKeyedUnarchiver.unarchiveObjectWithFile(Meal.ArchiveURL!.path!) as? [Meal]
     }
     
 }

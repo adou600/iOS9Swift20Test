@@ -9,9 +9,19 @@
 import XCTest
 
 class FoodTrackerUITests: XCTestCase {
-        
+    
+//    override init(){
+//        super.init()
+//    }
+    
+    var app: XCUIApplication!
+    var homePage: MealTablePage!
+    
     override func setUp() {
         super.setUp()
+        
+        app = XCUIApplication()
+        homePage = MealTablePage(app: app)
         
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
@@ -26,11 +36,33 @@ class FoodTrackerUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
+        
+        //TODO: reset meals items... Try to access MealTableViewController ?
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testTypedMealNameIsDisplayedInNavigationBar() {
+        // Tap Add button
+        let newMealPage = homePage.goToNewMealPage()
+        
+        // Type the meal name
+        newMealPage.typeMealName("fondue au fromage")
+        
+        // Navigation bar has the new entered meal name
+        XCTAssertTrue(app.navigationBars["fondue au fromage"].exists)
+    }
+    
+    func testCanDeleteAllMeals() {
+        homePage.tapEdit()
+        
+        while homePage.countMealsInTable() > 0 {
+            let mealsCount = homePage.countMealsInTable()
+            homePage.deleteFirstMealInTable()
+            XCTAssertEqual(mealsCount - 1, homePage.countMealsInTable())
+        }
+        
+        homePage.tapDone()
+        XCTAssertEqual(homePage.countMealsInTable(), 0)
     }
     
 }
